@@ -40,7 +40,7 @@ data:
 
 With this definition, we'll be mounting this into our Nginx container.  The volume resulting will be a directory with two files: tls.crt and tls.key.
 
-Now to fill it, the values must be Base64 with no line breaks, well use `entpl` for our example.
+Now to fill it, the values must be Base64 with no line breaks, well use `envtpl` for our example.
 
 ```bash
 $ TLS_CRT_BASE64=$(cat tls.crt | base64 -w 0) \
